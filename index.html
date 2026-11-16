@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abdikhaliq Mohamed Adam | Student Portfolio</title>
+  <meta name="description" content="Student portfolio of Abdikhaliq Mohamed Adam: web design practice, project ideas and how I work.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top">
+  <div class="container">
+    <header class="site-header">
+      <a class="brand" href="#top">
+        Abdikhaliq Mohamed Adam
+        <span>Student portfolio</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch light or dark mode" title="Switch light or dark mode">◐</button>
+    </header>
+  </div>
+
+  <main id="main">
+    <!-- Introduction -->
+    <section class="container hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Open to student project ideas</p>
+        <h1 id="hero-title">Hi, I’m Abdikhaliq. <em>I turn simple ideas into clear layouts.</em></h1>
+        <p class="intro">I’m a student learning web design and development. This portfolio shows what I’m practising, the project ideas I’m exploring, and how I work through a problem.</p>
+        <div class="actions">
+          <a class="button" href="#projects">Explore my projects <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <figure class="hero-art">
+          <img id="portrait" src="images/portrait.jpg" width="480" height="560" alt="Portrait of Abdikhaliq Mohamed Adam in a black shirt">
+          <figcaption>Abdikhaliq Mohamed Adam</figcaption>
+        </figure>
+        <aside class="now" aria-labelledby="now-title">
+          <h2 id="now-title">Right now</h2>
+          <dl>
+            <div><dt>Learning</dt><dd>HTML, CSS and JavaScript</dd></div>
+            <div><dt>Working on</dt><dd>Kaabe School Platform, with Daud</dd></div>
+            <div><dt>Next idea</dt><dd>Student Budget Tracker</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <div class="container">
+      <ul class="stats" aria-label="Portfolio at a glance">
+        <li><strong class="stat-num" data-target="3">3</strong><span>project ideas</span></li>
+        <li><strong class="stat-num" data-target="1">1</strong><span>group proposal</span></li>
+        <li><strong class="stat-num" data-target="3">3</strong><span>core skills in practice</span></li>
+        <li><strong>HTML · CSS · JS</strong><span>tools I’m using</span></li>
+      </ul>
+    </div>
+
+    <!-- About -->
+    <section class="about-band" id="about" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <div>
+          <p class="eyebrow">Student · Learner · Problem solver</p>
+          <h2 id="about-title">A little about me.</h2>
+        </div>
+        <div>
+          <p>I enjoy breaking a big problem into small steps. I’m interested in clear page layouts and in tools that can help students with everyday tasks.</p>
+          <p>I’m learning through class activities and practice, and I want to keep improving my HTML, CSS, JavaScript and problem-solving skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="container section" id="projects" aria-labelledby="projects-title">
+      <p class="eyebrow">Projects</p>
+      <h2 id="projects-title">Ideas I’m exploring.</h2>
+      <p class="section-intro">One shared proposal and two sample ideas. Each card has a small prototype you can try. They run only in your browser, nothing is saved or sent, and none is a finished product.</p>
+
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="group" aria-pressed="false">Group proposal</button>
+        <button type="button" class="filter" data-filter="sample" aria-pressed="false">Sample ideas</button>
+      </div>
+      <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
+
+      <div class="projects">
+        <!-- Kaabe -->
+        <article class="project" data-category="group">
+          <div class="project-body">
+            <p class="tag">Group project · Proposal</p>
+            <h3>Kaabe School Platform</h3>
+            <p>A shared project with Daud to help families find school information for different campuses. It is a proposal, not a finished school website.</p>
+          </div>
+          <div class="proto">
+            <h4>Prototype: admission inquiry form</h4>
+            <form id="inquiry-form" novalidate>
+              <label for="parent-name">Parent name</label>
+              <input id="parent-name" name="parent" type="text" autocomplete="name">
+
+              <label for="campus">Campus</label>
+              <select id="campus" name="campus">
+                <option>Campus 1 (sample)</option>
+                <option>Campus 2 (sample)</option>
+                <option>Campus 3 (sample)</option>
+              </select>
+
+              <label for="question">Question</label>
+              <textarea id="question" name="question" rows="3"></textarea>
+
+              <p class="form-message" id="inquiry-message" role="status" aria-live="polite"></p>
+              <button class="button small" type="submit">Send inquiry</button>
+            </form>
+          </div>
+        </article>
+
+        <!-- Budget tracker -->
+        <article class="project" data-category="sample">
+          <div class="project-body">
+            <p class="tag">Sample idea · Planned</p>
+            <h3>Student Budget Tracker</h3>
+            <p>A simple idea for tracking daily spending on food, transport, and study materials. This sample has not been built as a full project yet.</p>
+          </div>
+          <div class="proto">
+            <h4>Prototype: add an expense</h4>
+            <form id="expense-form" novalidate>
+              <label for="amount">Amount</label>
+              <input id="amount" name="amount" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 22">
+
+              <label for="category">Category</label>
+              <select id="category" name="category">
+                <option>Food</option>
+                <option>Transport</option>
+                <option>Study</option>
+              </select>
+
+              <p class="form-message" id="expense-message" role="status" aria-live="polite"></p>
+              <div class="button-row">
+                <button class="button small" type="submit">Add expense</button>
+                <button class="text-button" type="button" id="expense-reset">Clear</button>
+              </div>
+            </form>
+
+            <div class="budget" id="budget" aria-label="Spending by category">
+              <div class="budget-row" data-cat="Food">
+                <span>Food</span><div class="track"><div class="fill"></div></div><output>0%</output>
+              </div>
+              <div class="budget-row" data-cat="Transport">
+                <span>Transport</span><div class="track"><div class="fill"></div></div><output>0%</output>
+              </div>
+              <div class="budget-row" data-cat="Study">
+                <span>Study</span><div class="track"><div class="fill"></div></div><output>0%</output>
+              </div>
+              <p class="total">Weekly total: <strong id="weekly-total">0</strong></p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book exchange -->
+        <article class="project" data-category="sample">
+          <div class="project-body">
+            <p class="tag">Sample idea · Planned</p>
+            <h3>Campus Book Exchange</h3>
+            <p>A page idea where students can list books they want to share or exchange. This is a sample idea, not a working exchange service.</p>
+          </div>
+          <div class="proto">
+            <h4>Prototype: list a book</h4>
+            <form id="book-form" novalidate>
+              <label for="book-title">Title</label>
+              <input id="book-title" name="title" type="text">
+
+              <label for="book-course">Course</label>
+              <input id="book-course" name="course" type="text">
+
+              <label for="book-condition">Condition</label>
+              <select id="book-condition" name="condition">
+                <option>Like new</option>
+                <option>Good</option>
+                <option>Fair</option>
+              </select>
+
+              <p class="form-message" id="book-message" role="status" aria-live="polite"></p>
+              <button class="button small" type="submit">List book</button>
+            </form>
+            <ul class="book-list" id="book-list" aria-label="Listed books"></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills-band" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <p class="eyebrow">Skills</p>
+        <h2 id="skills-title">Still learning. Always practising.</h2>
+        <p class="section-intro">Bars show how far along I feel I am, not mastery.</p>
+
+        <div class="skills">
+          <article class="skill" data-level="70">
+            <h3>HTML and CSS</h3>
+            <p>Building and styling simple pages</p>
+            <div class="bar" role="img" aria-label="Progress: about 70 percent"><span style="--level: 70%"></span></div>
+          </article>
+          <article class="skill" data-level="55">
+            <h3>Design planning</h3>
+            <p>Sketching layouts and choosing clear labels</p>
+            <div class="bar" role="img" aria-label="Progress: about 55 percent"><span style="--level: 55%"></span></div>
+          </article>
+          <article class="skill" data-level="65">
+            <h3>Problem solving</h3>
+            <p>Breaking tasks into smaller steps</p>
+            <div class="bar" role="img" aria-label="Progress: about 65 percent"><span style="--level: 65%"></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="container section" id="process" aria-labelledby="process-title">
+      <p class="eyebrow">Process</p>
+      <h2 id="process-title">How I work on an idea.</h2>
+      <ol class="steps">
+        <li>
+          <h3>Break it down</h3>
+          <p>Split the problem into small tasks I can finish one at a time.</p>
+        </li>
+        <li>
+          <h3>Sketch it</h3>
+          <p>Plan the layout and labels before writing any code.</p>
+        </li>
+        <li>
+          <h3>Build it</h3>
+          <p>Write clean HTML and CSS, then add behaviour with JavaScript.</p>
+        </li>
+        <li>
+          <h3>Test it</h3>
+          <p>Check it on phone and desktop, then fix what I find.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-band" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let’s learn together.</h2>
+          <p>Have a student project idea? Get in touch.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="email-link" id="email-link" href="mailto:abdikhaliq.adam@binus.ac.id">abdikhaliq.adam@binus.ac.id</a>
+          <button class="button" type="button" id="copy-email">Copy email</button>
+          <p class="visually-hidden" id="copy-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container site-footer">
+    <p>© <span id="year">2026</span> Abdikhaliq Mohamed Adam</p>
+    <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</body>
+</html>
